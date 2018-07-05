@@ -1,0 +1,341 @@
+html,body{
+  height: 100%;
+}
+body{
+width: 100%;
+height: 100%;
+background-image:url('../img/fnd_pasto.png');
+background-position: top center;
+background-repeat: no-repeat;
+background-size:cover;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+.bg-repeat{
+  background-repeat: repeat;
+}
+
+/* Tipografias */
+@font-face {
+    font-family: work_sans_black;
+    src: url(../fonts/Work_Sans/WorkSans-Black.ttf);
+}
+@font-face {
+    font-family: work_sans_bold;
+    src: url(../fonts/Work_Sans/WorkSans-Bold.ttf);
+}
+@font-face {
+    font-family: work_sans_extra_bold;
+    src: url(../fonts/Work_Sans/WorkSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: work_sans_extra_light;
+    src: url(../fonts/Work_Sans/WorkSans-ExtraLight.ttf);
+}
+@font-face {
+    font-family: work_sans_light;
+    src: url(../fonts/Work_Sans/WorkSans-Light.ttf);
+}
+@font-face {
+    font-family: work_sans_medium;
+    src: url(../fonts/Work_Sans/WorkSans-Medium.ttf);
+}
+@font-face {
+    font-family: work_sans_regular;
+    src: url(../fonts/Work_Sans/WorkSans-Regular.ttf);
+}
+@font-face {
+    font-family: work_sans_semi_bold;
+    src: url(../fonts/Work_Sans/WorkSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: work_sans_thin;
+    src: url(../fonts/Work_Sans/WorkSans-Thin.ttf);
+}
+
+/* Tipografías cuerpo*/
+@font-face {
+    font-family: libre_flanklin_black;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Black.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_black_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-BlackItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_bold;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Bold.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_bold_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-BoldItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_extra_bold;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-ExtraBold.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_extra_bold_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_extra_light;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-ExtraLight.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Italic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_light;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-light.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_light_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-LightItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_medium;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Medium.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_medium_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-MediumItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_regular;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Regular.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_semi_bold;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-SemiBold.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_semi_bold_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_semi_bold_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_semi_bold_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_thin;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Thin.ttf);
+}
+@font-face {
+    font-family: libre_flanklin_thin_italic;
+    src: url(../fonts/Libre_Franklin/LibreFranklin-ThinItalic.ttf);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'work_sans_bold'
+}
+p{
+  font-family: 'libre_flanklin_regular'
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/*  ------- Estilos de Bootstrap --------*/
+.btn-rounded {
+  border-radius: 500px;
+}
+.btn-group-xl>.btn, .btn-xl{
+  padding:.8rem 1.3rem;
+  font-size:1.55rem;
+  line-height: 1.8;
+  border-radius: .6rem;
+}
+/* ------------- Estilos de Generales -----------------*/
+
+.ui-wrapper{
+  width: 95%;
+  height: 90%;
+  margin: 3% auto;
+
+}
+.menu{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.menu_boton{
+  width: 100%;
+  max-width: 50px;
+}
+.datos_usuario{
+  width: 70%;
+  float: right;
+  text-align: right;
+  padding: 15px 5px;
+  line-height: 0.2em;
+  font-size: 14px;
+}
+.icono_usuario{
+  width: 10%;
+  max-width: 50px;
+  min-width: 50px;
+  float: right;
+}
+.nombre_usuario{
+  color: #fff;
+  font-weight: bold;
+}
+.grupo_usuario{
+  color: #fff;
+  font-size: 1em;
+}
+.contenido{
+  height: 90%;
+  overflow: hidden;
+}
+.img_decoracion{
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 10%;
+}
+
+/* ---------- Estilos de ayuda --------------------*/
+.full_height{
+  height: 100%;
+}
+
+/* ------------- Estilos de lección -----------------*/
+.titulo_leccion{
+  color:#2f4152;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.titulo_leccion small{
+  font-family: 'work_sans_light';
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.titulo_lectura{
+  color:#2f4152;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.titulo_lectura small{
+  font-family: 'work_sans_light';
+  font-size: 24px;
+  font-weight: 100;
+}
+.texto_ejercicios_completados{
+  color:#2f4152;
+  font-size: 30px;
+  font-weight: 700;
+}
+.texto_animales_restatados{
+  color:#2f4152;
+  font-size: 80px;
+  font-weight: 700;
+  text-shadow: -3px 0 #97bb6e, 0 3px #97bb6e, 3px 0 #97bb6e, 0 -3px #97bb6e;
+}
+.contenedor_ejercicios{
+  width: 100%;
+  height: 90%;
+  padding: 10px;
+  background: linear-gradient(#FFEEB5, #FFEE74);
+  border: solid 10px #FFF;
+  border-radius: 15px;
+  -moz-box-shadow:    inset 0 0 10px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+   -webkit-box-shadow: inset 0 0 10px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+   box-shadow:         inset 0 0 2px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+}
+.contenedor_ejercicios h3{
+  color:#2f4152;
+  font-size: 21px;
+  font-weight: 700;
+}
+.scroll_ejercicios{
+  height: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ejercicio{
+  width: 99%;
+  height: 25%;
+  padding: 10px;
+  background: linear-gradient(#E6C58F, #DAAE6E);
+  border: solid 3px #FDF4D5;
+  border-radius: 15px;
+  -moz-box-shadow:    inset 0 0 10px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+   -webkit-box-shadow: inset 0 0 10px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+   box-shadow:         inset 0 0 2px #000000, 3px 3px 5px rgba(0,0,0,0.5);
+   margin-bottom: 20px;
+}
+.ejercicio h4{
+  color:#2f4152;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom:0;
+}
+
+/*------------- Estilos Ejercicios --------------*/
+.imagen_fondo_ejercicio{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../img/fondo-piramide.png');
+  background-position:right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contenedor_lectura{
+  width: 95%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 10px;
+  overflow-y: scroll;
+  border-radius: 15px;
+}
+.lectura{
+  padding: 20px;
+  padding-bottom: 150px;
+}
+.lectura h3{
+  font-size: 40px;
+  color: #4F4F4F;
+  font-family: 'libre_flanklin_semi_bold';
+}
+.lectura p{
+  font-size: 24px;
+  color: #778B98;
+}
+.imagen_sobrepuesta{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/pleca_agua.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#contenedor_cuenta_atras{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.respuesta{
+  margin-bottom: 20px;
+}
