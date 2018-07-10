@@ -16,44 +16,6 @@ overflow: hidden;
   background-repeat: repeat;
 }
 
-/* Tipografias */
-@font-face {
-    font-family: work_sans_black;
-    src: url(../fonts/Work_Sans/WorkSans-Black.ttf);
-}
-@font-face {
-    font-family: work_sans_bold;
-    src: url(../fonts/Work_Sans/WorkSans-Bold.ttf);
-}
-@font-face {
-    font-family: work_sans_extra_bold;
-    src: url(../fonts/Work_Sans/WorkSans-ExtraBold.ttf);
-}
-@font-face {
-    font-family: work_sans_extra_light;
-    src: url(../fonts/Work_Sans/WorkSans-ExtraLight.ttf);
-}
-@font-face {
-    font-family: work_sans_light;
-    src: url(../fonts/Work_Sans/WorkSans-Light.ttf);
-}
-@font-face {
-    font-family: work_sans_medium;
-    src: url(../fonts/Work_Sans/WorkSans-Medium.ttf);
-}
-@font-face {
-    font-family: work_sans_regular;
-    src: url(../fonts/Work_Sans/WorkSans-Regular.ttf);
-}
-@font-face {
-    font-family: work_sans_semi_bold;
-    src: url(../fonts/Work_Sans/WorkSans-SemiBold.ttf);
-}
-@font-face {
-    font-family: work_sans_thin;
-    src: url(../fonts/Work_Sans/WorkSans-Thin.ttf);
-}
-
 /* Tipografías cuerpo*/
 @font-face {
     font-family: libre_flanklin_black;
@@ -89,7 +51,7 @@ overflow: hidden;
 }
 @font-face {
     font-family: libre_flanklin_light;
-    src: url(../fonts/Libre_Franklin/LibreFranklin-light.ttf);
+    src: url(../fonts/Libre_Franklin/LibreFranklin-Light.ttf);
 }
 @font-face {
     font-family: libre_flanklin_light_italic;
@@ -133,7 +95,7 @@ overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'work_sans_bold'
+  font-family: 'libre_flanklin_extra_bold'
 }
 p{
   font-family: 'libre_flanklin_regular'
@@ -158,43 +120,44 @@ p{
 
 .ui-wrapper{
   width: 95%;
-  height: 90%;
-  margin: 3% auto;
+  height: 97%;
+  margin: 0 auto 3%;
 
 }
 .menu{
   width: 100%;
-  margin-bottom: 20px;
 }
 .menu_boton{
   width: 100%;
-  max-width: 50px;
+  max-width: 35px;
+  margin: 10px
+}
+.info_menu {
+  margin: 10px;
 }
 .datos_usuario{
   width: 70%;
   float: right;
   text-align: right;
-  padding: 15px 5px;
-  line-height: 0.2em;
+  padding: 10px 5px;
   font-size: 14px;
 }
 .icono_usuario{
   width: 10%;
-  max-width: 50px;
-  min-width: 50px;
+  max-width: 40px;
+  min-width: 40px;
   float: right;
+  margin: 10px
 }
 .nombre_usuario{
-  color: #fff;
+  color: #2f4152;
   font-weight: bold;
+  margin: 0;
 }
 .grupo_usuario{
-  color: #fff;
+  color: #2f4152;
   font-size: 1em;
-}
-.contenido{
-  height: 90%;
-  overflow: hidden;
+  margin: 0;
 }
 .img_decoracion{
   position: absolute;
@@ -211,13 +174,13 @@ p{
 /* ------------- Estilos de lección -----------------*/
 .titulo_leccion{
   color:#2f4152;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .titulo_leccion small{
-  font-family: 'work_sans_light';
-  font-size: 50px;
+  font-family: 'libre_flanklin_light';
+  font-size: 40px;
   font-weight: 100;
 }
 
@@ -228,13 +191,18 @@ p{
   margin-bottom: 20px;
 }
 .titulo_lectura small{
-  font-family: 'work_sans_light';
+  font-family: 'libre_flanklin_light';
   font-size: 24px;
   font-weight: 100;
 }
 .texto_ejercicios_completados{
   color:#2f4152;
   font-size: 30px;
+  font-weight: 700;
+}
+.texto_instrucciones{
+  color:#2f4152;
+  font-size: 22px;
   font-weight: 700;
 }
 .texto_animales_restatados{
@@ -309,18 +277,18 @@ p{
   padding-bottom: 150px;
 }
 .lectura h3{
-  font-size: 40px;
+  font-size: 30px;
   color: #4F4F4F;
   font-family: 'libre_flanklin_semi_bold';
 }
 .lectura p{
   font-size: 24px;
-  color: #778B98;
+  color: #5e6d77;
 }
 .imagen_sobrepuesta{
   width: 100%;
   height: 100px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-image: url("../img/pleca_agua.png");
