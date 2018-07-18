@@ -48,7 +48,9 @@
             </div>
           </div>
           <div class="imagen_sobrepuesta"></div>
-          <div id="contenedor_cuenta_atras"></div>
+          <div class="container-progress_btn">
+            <div class='pbtn' id="countDiv"></div>
+          </div>
         </div>
     </div>
 
@@ -57,19 +59,38 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="js/progressbar.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var bar = new ProgressBar.Circle(contenedor_cuenta_atras, {
-          strokeWidth: 20,
-          easing: 'easeInOut',
-          duration: 1400,
-          color: '#D95127',
-          trailColor: '#eee',
-          trailWidth: 20,
-          svgStyle: null
-        });
+    <script>
+      function countDown (count) {
+        if (count > 0) {
+         var d = document.getElementById("countDiv");
+         d.innerHTML = count;
+         setTimeout (function() { countDown(count-1); }, 1000);
+         }
+      }
+      countDown(3);
+    </script>
+    <script>
+      $(function() {
+      var btn = $(".pbtn");
+      btn.on("click", function() {
+        $(this).addClass('pbtn__progress');
+        setTimeout(function() {
+          btn.addClass('pbtn__progress--fill')
+        }, 500);
+        setTimeout(function() {
+          btn.removeClass('pbtn__progress--fill')
+        }, 4100);
+        setTimeout(function() {
+          btn.addClass('pbtn__complete');
+          var d = document.getElementById("countDiv");
+          d.innerHTML = '<a href="./pregunta.html"><span class="foo">Continuar<i class="fa fa-arrow-right"></i></span></a>';
+        }, 4400);
+      });
 
-        bar.animate(1.0);  // Number from 0.0 to 1.0
+        setTimeout(function(){
+         btn.click();
+        }, 3000);
+      });
     </script>
   </body>
 </html>
