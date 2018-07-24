@@ -537,43 +537,57 @@ p{
   align-items: center;
   background-image:url('../img/fnd_pasto.png');
   background-size: contain;
-}
+} */
 .division-mapa {
   background: blue;
   border: solid 1px black;
   height: 400px;
   width: 200px;
   min-width: 200px;
-} */
-.header-mapa {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+}
+.exampleContainer .zoomContainer .zoomTarget {
+    background-color: white;
+    width:200px;
+    height:450px;
+    padding:20px;
+    float:left;
 }
 .slideshowContainer {
   background-image:url('../img/fnd_pasto.png');
-    border-radius: 5px;
-    border-radius: 3px;
-    width: 94%;
-    height: 94%;
-    margin: 3% auto;
+  border-radius: 5px;
+  border-radius: 3px;
+  width: 90%;
+  height: 90%;
+  margin: 4% auto;
 }
 
 .slideshowContainer .zoomContainer .zoomTarget {
-    background-color: transparent;
-    border: 1px solid grey;
-    width:10%;
-    padding-bottom: 28%;
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    width:137px;
+    height:50px;
+    margin:10px;
+    padding:20px;
     float:left;
 }
 
+.slideshowNavigation .zoomButton {
+    font-size:32px;
+    border: 1px solid #EAEAEA;
+    padding: 20px;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.slideshowNavigation .zoomButton:hover {
+    background-color:#eee;
+}
+
 .zoomContainer {
-  background-image:url('../img/mapa/ZoomOut.png');
+  background-image:url('../img/fnd_pasto.png');
   background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   display: flex;
@@ -581,80 +595,19 @@ p{
   justify-content: center;
 }
 
-.zoomViewport {
-
-    /* this needs to have some kind of positioning, absolute
-       or relative, to have the pos of elements inside it calculated correctly,
-       since otherwise the computeTotalTransformation does not work correctly
-       (offsetParent for items would be outside the #content, and offset
-       would be calculated relative to the parent..) */
-	position:relative;
-
-    overflow-y:hidden;
-    overflow-x:scroll;
-}
-
-/* botones navegación mapa */
-
-.slideshowNavigation {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-}
-.slideshowNavigation .zoomButton,
-.slideshowNavigation .zoomButton:before,
-.slideshowNavigation .zoomButton .fas {
-  transition: all 0.35s;
-  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-.slideshowNavigation .zoomButton:before {
-  top: 90%;
-  left: -110%;
-}
-
-.slideshowNavigation .zoomButton:before {
-  background-color: #3cf;
-}
-.slideshowNavigation .zoomButton .fas {
-  color: #3cf;
-}
-.slideshowNavigation .zoomButton:focus:before,
-.slideshowNavigation .zoomButton:hover:before {
-  top: -10%;
-  left: -10%;
-}
-.slideshowNavigation .zoomButton:focus .fas,
-.slideshowNavigation .zoomButton:hover .fas {
-  color: #fff;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
 .slideshowNavigation .zoomButton {
-  display: inline-block;
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #c9cdd5;
-  border-radius: 28%;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
-  opacity: 0.99;
-}
-.slideshowNavigation .zoomButton:before {
-  content: '';
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+    font-size:32px;
+    border: 1px solid #EAEAEA;
+    padding: 20px;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
 }
 
-
+.slideshowNavigation .zoomButton:hover {
+    background-color:#eee;
+}
 .level0, .level1, .level2 {
 	margin-left:10px;
 	margin-top:10px;
