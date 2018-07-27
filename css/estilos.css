@@ -561,16 +561,15 @@ p{
     margin: 3% auto;
 }
 
-.slideshowContainer .zoomContainer .zoomTarget {
+.slideshowContainer .zoomContainer .mapaCompleto {
     background-color: transparent;
-    border: 1px solid grey;
-    width:10%;
-    padding-bottom: 28%;
+    width:100%;
+    height:438px;
     float:left;
 }
 
 .zoomContainer {
-  background-image:url('../img/mapa/ZoomOut.png');
+  background-image:url('../img/mapa/fnd_pasto.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -579,6 +578,9 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .zoomViewport {
@@ -598,8 +600,11 @@ p{
 
 .slideshowNavigation {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0;
+  width: 75%;
+  position: fixed;
+  left: 50%;
+  margin-left: -37.5%;
 }
 .slideshowNavigation .zoomButton,
 .slideshowNavigation .zoomButton:before,
@@ -636,7 +641,7 @@ p{
   width: 50px;
   height: 50px;
   line-height: 50px;
-  margin: 0 10px;
+  margin: 15px 10px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -654,12 +659,10 @@ p{
           transform: rotate(45deg);
 }
 
-
-.level0, .level1, .level2 {
-	margin-left:10px;
-	margin-top:10px;
-	border:1px solid black;
+.btn-next {
+  float: right;
 }
+
 
 .level2 {
 	width:80px;
@@ -669,16 +672,24 @@ p{
 }
 
 .level1 {
-	width:200px;
-	height:500px;
-	background: #ddd;
+	width:100%;
+	height:50%;
+  position: relative;
 	float: left;
 	font-size:30px;
 	font-family: Helvetica;
 }
 
+.level1 img, .level0 img{
+  width: 100%;
+}
+
 .level0 {
-	width:1000px;
-	height:1000px;
-	position:absolute;
+	width: 217px;
+  height: 434px;
+  display: inline-block;
+}
+#s1 {
+  background:url('../img/mapa/fnd_s1.png');
+  background-size: cover;
 }
