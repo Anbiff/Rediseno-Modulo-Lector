@@ -529,22 +529,145 @@ p{
 }
 
 /* Mapa */
-/* .contenedor-mapa {
+
+.overlay-inicio {
+  width: 100%;
+  height:100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, .8);
+  top:0;
+  left: 0;
+  z-index: 9999;
   display: flex;
-  height: 100%;
-  width: 2200px;
-  overflow: visible;
   align-items: center;
-  background-image:url('../img/fnd_pasto.png');
-  background-size: contain;
+  justify-content: center;
+  white-space: nowrap;
 }
-.division-mapa {
-  background: blue;
-  border: solid 1px black;
-  height: 400px;
-  width: 200px;
-  min-width: 200px;
-} */
+.bienvenida-cont {
+  text-align: center;
+}
+.titulo_bienvenida {
+    color: #2f4152;
+    font-family: libre_flanklin_black;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.sub_bienvenida {
+    color: #2f4152;
+    font-family: libre_flanklin_light;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.bienvenida-cont p{
+  font-size: 20px;
+}
+.mover_overlay {
+  opacity: 0;
+  transform: translate(0%, 30px);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+.mover_overlay_abajo {
+  opacity: 0;
+  transform: translate(0%, -30px);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn-3 {
+	background: #fcad26;
+	color: #fff;
+}
+
+.btn-3:hover {
+	background: #f29e0d;
+}
+
+.btn-3:active {
+	background: #f58500;
+	top: 2px;
+}
+
+.btn-3:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+/* Button 3e */
+.btn-3e {
+	padding: 25px 120px 25px 60px;
+	overflow: hidden;
+}
+
+.btn-3e:before {
+	left: auto;
+	right: 10px;
+	z-index: 2;
+}
+
+.btn-3e:after {
+	width: 30%;
+	height: 200%;
+	background: rgba(255,255,255,0.1);
+	z-index: 1;
+	right: 0;
+	top: 0;
+	margin: -5px 0 0 -5px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform-origin: 0 0;
+	-moz-transform: rotate(-20deg);
+	-ms-transform-origin: 0 0;
+	-ms-transform: rotate(-20deg);
+	transform-origin: 0 0;
+	transform: rotate(-20deg);
+}
+.btn-3e:hover:after {
+	width: 40%;
+}
+.icon-arrow-right:before {
+  font-family: "Font Awesome 5 Free";
+	content: "\f061";
+}
+
+
 .header-mapa {
   width: 100%;
   position: fixed;
@@ -563,9 +686,8 @@ p{
 
 .slideshowContainer .zoomContainer .mapaCompleto {
     background-color: transparent;
-    width:100%;
-    height:438px;
-    float:left;
+    margin: 20px;
+    display: flex;
 }
 
 .zoomContainer {
@@ -578,11 +700,16 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
   white-space: nowrap;
 }
-
+@media all
+and (max-width : 1024px)  {
+  .zoomContainer {
+    justify-content: left;
+  }
+}
 .zoomViewport {
 
     /* this needs to have some kind of positioning, absolute
@@ -591,9 +718,8 @@ p{
        (offsetParent for items would be outside the #content, and offset
        would be calculated relative to the parent..) */
 	position:relative;
-
-    overflow-y:hidden;
-    overflow-x:scroll;
+  overflow-y:hidden;
+  overflow-x:scroll;
 }
 
 /* botones navegación mapa */
@@ -659,37 +785,181 @@ p{
           transform: rotate(45deg);
 }
 
-.btn-next {
-  float: right;
-}
-
-
 .level2 {
-	width:80px;
-	height:80px;
+	width:100%;
+	height:50%;
 	float: left;
-	background: #aaa;
 }
 
 .level1 {
-	width:100%;
-	height:50%;
+	width: 250px;
+  height: 100%;
   position: relative;
 	float: left;
-	font-size:30px;
-	font-family: Helvetica;
 }
 
-.level1 img, .level0 img{
+.level1 img, .level2 img{
+  width: 100%;
+}
+.level1 svg, .level2 svg{
   width: 100%;
 }
 
 .level0 {
-	width: 217px;
-  height: 434px;
+  height: 500px;
+  width: auto;
   display: inline-block;
 }
+
 #s1 {
   background:url('../img/mapa/fnd_s1.png');
   background-size: cover;
+}
+#s2 {
+  background:url('../img/mapa/fnd_s1.png');
+  background-size: cover;
+  background-position: right;
+}
+#s3 {
+  background:url('../img/mapa/fnd_s2.png');
+  background-size: cover;
+}
+#s4 {
+  background:url('../img/mapa/fnd_s2.png');
+  background-size: cover;
+  background-position: right;
+}
+
+.btn-entrar {
+  margin: 15px auto;
+}
+
+.info-activa {
+  text-align: center;
+    position: fixed;
+    bottom: 160px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgba(255, 255, 255, .7);
+  padding: 20px;
+  border-radius: 5px;
+}
+.num_leccion {
+  margin: 0 auto;
+    width: 150px;
+    height: 47px;
+    background: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 23px;
+    border: solid 5px #6eceec;
+    position: relative;
+    bottom: 83px;
+}
+.lock .num_leccion{
+    background: gainsboro;
+    border: solid 5px #888d8e;
+}
+.current .num_leccion{
+    background: white;
+    border: solid 5px #fbd608;
+}
+.num_leccion_activa{
+  height: 60px;
+  background: white;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 30px;
+  border: solid 5px #6eceec;
+  position: fixed;
+  top: 110px;
+  left: 20px;
+}
+
+.num_leccion_activa .titulo_lectura{
+  font-size: 30px;
+}
+
+#titulo_leccion {
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+/* Animaciones mapa */
+
+.cls-9 {
+  stroke-width:0px;
+}
+
+.level2.selectedZoomTarget .cls-9 {
+  animation: hideshow 400ms ease-out 1 forwards;
+}
+
+@keyframes hideshow {
+  from { stroke-width:09px; }
+  to { stroke-width:20px; }
+}
+
+
+/* Botonera Mapa */
+
+.btn-next {
+  float: right;
+}
+.contenedor-tarjetas {
+  height: 150px;
+  width: 535px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.tarjeta-mapa {
+  width: 120px;
+  height: 150px;
+  margin: 0 5px;
+  border: solid 1px #ac9447;
+  background: #eddfb4;
+  display: inline-block;
+  border-radius: 8px;
+  text-align: center;
+  overflow: auto;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0);
+  box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0);
+  transform: translate(0%, 40px);
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.tarjeta-mapa:hover {
+  transform: translate(0%, 0);
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0.4);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0.4);
+  box-shadow: 0px 0px 13px 0px rgba(78, 66, 53, 0.4);
+}
+.int-tarjeta {
+  height: 100px;
+  background: #fff8e2;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(194,163,130,1);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(194,163,130,1);
+  box-shadow: 0px 10px 0px 0px rgba(194,163,130,1);
+}
+.tarjeta-mapa p{
+  line-height: 19px;
+  min-height: 38px;
+  color: #2f4152;
+  font-family: libre_flanklin_bold;
+  margin: 5px 0;
 }
