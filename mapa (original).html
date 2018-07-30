@@ -19,16 +19,17 @@
 
     <title>Lectura Inteligente</title>
   </head>
-  <body style="background:#a2e20b;">
+  <body style="background:#b6e137;">
   <header class="header-mapa">
     <div class="row">
-      <div class="col">
+      <div class="col-6">
         <div class="menu_boton">
           <a href="#"><img src="img/menu.png" class="img-fluid" alt=""></a>
-
         </div>
+
+        <h1 class="titulo_lectura info_menu"> <small>Mapa</small> de Lecciones</h1>
       </div>
-      <div class="col-9">
+      <div class="col-6">
         <div class="icono_usuario">
           <a href="#"><img src="img/user.png" class="img-fluid" alt=""></a>
         </div>
@@ -39,29 +40,76 @@
       </div>
     </div>
   </header>
+  <div class="overlay-inicio">
+    <div class="bienvenida-cont">
+      <h1 class="titulo_bienvenida">¡Bienvenido</h1>
+      <h2 class="sub_bienvenida">al mundo de lectura inteligente!</h2>
+      <hr />
+      <p class="instruc_bienvenida">Elige una lección o continúa desde la lección en la que te encuentras</p>
+      <p>
+        <button class="btn btn-3 btn-3e icon-arrow-right btn-inicio instruc_bienvenida">Continuar</button>
+      </p>
+    </div>
+  </div>
   <div class="zoomViewport slideshowContainer" id="caja">
       <div class="zoomContainer">
-          <div class="zoomTarget mapaCompleto">
-            <div id="medias" class="zoomTarget level0">
-        			<div id="a1" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/ED.png"></div>
+          <div class="zoomTarget mapaCompleto level0">
+            <div id="s1" class=" level1">
+        			<div id="l1" class="zoomTarget level2" data-closeclick="true">
+                <img src="img/mapa/L1.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">1</span></h1>
+                </div>
+              </div>
+        			<div id="l2" class="zoomTarget level2 current" data-closeclick="true">
+                <img src="img/mapa/L2_current.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">2</span></h1>
+                </div>
+              </div>
         		</div>
-            <div id="s1" class=" level0">
-        			<div id="a1" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L1.png"></div>
-        			<div id="a3" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L2.png"></div>
+            <div id="s2" class=" level1">
+        			<div id="l4" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L4_block.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">4</span></h1>
+                </div>
+              </div>
+        			<div id="l3" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L3_block.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">3</span></h1>
+                </div>
+              </div>
         		</div>
-            <div id="a" class=" level0">
+            <div id="s3" class=" level1">
+        			<div id="l5" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L5_block.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">5</span></h1>
+                </div>
+              </div>
+        			<div id="l6" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L6_block.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">6</span></h1>
+                </div>
+              </div>
+        		</div>
+            <div id="s4" class=" level1">
 
-        			<div id="a2" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L4.png"></div>
-        			<div id="a4" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L3.png"></div>
-        		</div>
-            <div id="a" class=" level0">
-        			<div id="a1" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L5.png"></div>
-        			<div id="a2" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L6.png"></div>
-        		</div>
-            <div id="a" class=" level0">
-
-        			<div id="a4" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L8.png"></div>
-        			<div id="a3" class="zoomTarget level1" data-closeclick="true"><img src="img/mapa/L7.png"></div>
+        			<div id="l8" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L8_block.png">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">8</span></h1>
+                </div>
+              </div>
+        			<div id="l7" class="zoomTarget level2 lock" data-closeclick="true">
+                <img src="img/mapa/L7_block.svg">
+                <div class="num_leccion">
+                  <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">7</span></h1>
+                </div>
+              </div>
         		</div>
           </div>
       </div>
@@ -71,45 +119,79 @@
   </div>
 
   <div class="slideshowNavigation clearfix" id="botonera">
-      <div class="zoomButton btn-next" data-type="prev" data-root=".slideshowContainer"><i class="fas fa-angle-left"></i></div>
-      <div class="zoomButton btn-prev" data-type="next" data-root=".slideshowContainer"><i class="fas fa-angle-right"></i></div>
+
+      <div class="num_leccion_activa" style="display:none;">
+        <h1 class="titulo_lectura"> <small> Te encuentras en la </small>Lección <span class="ejercicios_completados"> 7</span></h1>
+      </div>
+    <div class="info-activa" style="display:none;">
+      <h1 id="titulo_leccion">Nombre de leccion</h1>
+      <span class="badge badge-primary">Lección Activa</span>
+      <span class="badge badge-secondary">Bloqueada</span>
+      <span class="badge badge-success">Lección Completa</span>
+      <button class="btn btn-3 btn-3e icon-arrow-right btn-entrar">Entrar a lección</button>
+    </div>
+      <div class="zoomButton btn-prev" data-type="prev" data-root=".slideshowContainer"><i class="fas fa-angle-left"></i></div>
+      <div class="contenedor-tarjetas">
+        <div class="tarjeta-mapa">
+            <p>Repositorio</p>
+            <div class="int-tarjeta"></div>
+        </div>
+        <div class="tarjeta-mapa">
+            <p>Laboratorio de grabación</p>
+            <div class="int-tarjeta"></div>
+        </div>
+        <div class="tarjeta-mapa">
+            <p>Mensajería</p>
+            <div class="int-tarjeta"></div>
+        </div>
+        <div class="tarjeta-mapa">
+            <p>Foro de discusión</p>
+            <div class="int-tarjeta"></div>
+        </div>
+      </div>
+      <div class="zoomButton btn-next" data-type="next" data-root=".slideshowContainer"><i class="fas fa-angle-right"></i></div>
   </div>
   </div>
-    <!-- <div class="contenedor-mapa zoomTarget" data-duration="600">
-      <div class="division-mapa" id="sec-ed">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l1">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l1">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l2">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l3">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l4">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l5">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l6">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l7">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-l8">
-
-      </div>
-      <div class="division-mapa zoomTarget" data-targetsize="0.45" data-duration="600" id="sec-ed">
-
-      </div>
-    </div> -->
     <script src="./js/jquery.zoomooz.min.js"></script>
+    <script>
+      $(function() {
+        // find elements
+        var overlay_bco = $(".overlay-inicio")
+        var ele_overlay = $(".titulo_bienvenida,.sub_bienvenida")
+        var instruc_overlay = $(".instruc_bienvenida")
+        var button = $(".btn-inicio")
+
+        button.on("click", function(){
+         ele_overlay.addClass("mover_overlay");
+         instruc_overlay.addClass("mover_overlay_abajo");
+         setTimeout(function(){
+            overlay_bco.addClass("d-none");
+          }, 1000);
+         setTimeout(function(){
+            $(".btn-next").click();
+          }, 1300);
+           setTimeout(function(){
+            $("#l2").click();
+          }, 2000);
+       });
+
+      });
+    </script>
+    <script>
+    $(function () {
+      $( ".level2" ).click(function() {
+        $(this).toggleClass("active");
+        if ( $( this ).is( ".active" ) ) {
+            $( ".info-activa" ).show();
+            $( ".num_leccion_activa" ).show();
+            $( ".num_leccion" ).hide();
+        } else {
+          $( ".info-activa" ).hide();
+          $( ".num_leccion_activa" ).hide();
+          $( ".num_leccion" ).show();
+        }
+      });
+    });
+    </script>
   </body>
 </html>
