@@ -14,19 +14,22 @@
     <title>Lectura Inteligente</title>
   </head>
   <body class="bg-repeat" style="background-image:url('img/fnd_pasto.png')">
-      <div class="row">
-        <div class="col">
-          <h1 class="titulo_lectura info_menu"> <small> Lección 8.</small> Ejercicio <span class="ejercicios_completados">13</span></h1>
-        </div>
-        <div class="col-7">
-          <div class="icono_usuario">
-            <a href="#"><img src="img/user.png" class="img-fluid" alt=""></a>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="titulo_lectura info_menu"> <small> Lección 8.</small> Ejercicio <span class="ejercicios_completados">13</span></h1>
           </div>
-          <div class="datos_usuario">
-              <p class="nombre_usuario">Juan José Hernández</p>
-              <p class="grupo_usuario">Nombre de Grupo</p>
+          <div class="col-7">
+            <div class="icono_usuario">
+              <a href="#"><img src="img/user.png" class="img-fluid" alt=""></a>
+            </div>
+            <div class="datos_usuario">
+                <p class="nombre_usuario">Juan José Hernández</p>
+                <p class="grupo_usuario">Nombre de Grupo</p>
+            </div>
           </div>
         </div>
+
       </div>
     <div class="ui-wrapper">
         <div class="contenido">
@@ -34,27 +37,20 @@
             <div class="contenedor_lectura">
               <div class="lectura">
                 <p>Pregunta 2 de 5</p>
-                <h3>Esta es una pregunta corta</h3>
-                <p>respuestas</p>
-                <div class="row">
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-info btn-block">Respuesta 1</button>
+                <h3>Esta es una pregunta de 2 opciones</h3>
+                <p>Elige la respuesta correcta</p>
+                  <form class="form container">
+                  <div class="row">
+                    <div class="inputGroup col-6 col-sm-12 col-md-6">
+                      <input id="radio1" name="radio" type="radio"/>
+                      <label for="radio1">Yes</label>
+                    </div>
+                    <div class="inputGroup col-6 col-sm-12 col-md-6">
+                      <input id="radio2" name="radio" type="radio"/>
+                      <label for="radio2">No</label>
+                    </div>
                   </div>
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-info btn-block">Respuesta 2</button>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-danger btn-block">Respuesta 3</button>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-info btn-block">Respuesta 4</button>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-success btn-block">Respuesta 5</button>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 text-center respuesta">
-                    <button type="button" class="btn btn-rounded btn-lg btn-outline-info btn-block">Respuesta 6</button>
-                  </div>
+                </form>
                 </div>
               </div>
             </div>
