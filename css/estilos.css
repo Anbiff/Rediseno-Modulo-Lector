@@ -543,6 +543,13 @@ p{
   justify-content: center;
   white-space: nowrap;
 }
+.blur {
+  filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
+}
 .bienvenida-cont {
   text-align: center;
 }
@@ -720,6 +727,12 @@ and (max-width : 1024px)  {
 	position:relative;
   overflow-y:hidden;
   overflow-x:scroll;
+
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 /* botones navegación mapa */

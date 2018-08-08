@@ -51,17 +51,17 @@
       </p>
     </div>
   </div>
-  <div class="zoomViewport slideshowContainer" id="caja">
+  <div class="zoomViewport slideshowContainer blur" id="caja">
       <div class="zoomContainer">
           <div class="zoomTarget mapaCompleto level0">
             <div id="s1" class=" level1">
-        			<div id="l1" class="zoomTarget level2" data-closeclick="true">
+        			<div id="l1" class="zoomTarget level2" data-closeclick="true" data-lección="1">
                 <img src="img/mapa/L1.svg">
                 <div class="num_leccion">
                   <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">1</span></h1>
                 </div>
               </div>
-        			<div id="l2" class="zoomTarget level2 current" data-closeclick="true">
+        			<div id="l2" class="zoomTarget level2 current" data-closeclick="true" data-lección="1">
                 <img src="img/mapa/L2_current.svg">
                 <div class="num_leccion">
                   <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">2</span></h1>
@@ -69,13 +69,13 @@
               </div>
         		</div>
             <div id="s2" class=" level1">
-        			<div id="l4" class="zoomTarget level2 lock" data-closeclick="true">
+        			<div id="l4" class="zoomTarget level2 lock" data-closeclick="true" data-lección="1">
                 <img src="img/mapa/L4_block.svg">
                 <div class="num_leccion">
                   <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">4</span></h1>
                 </div>
               </div>
-        			<div id="l3" class="zoomTarget level2 lock" data-closeclick="true">
+        			<div id="l3" class="zoomTarget level2 lock" data-closeclick="true" data-lección="1">
                 <img src="img/mapa/L3_block.svg">
                 <div class="num_leccion">
                   <h1 class="titulo_lectura"> <small> Lección </small><span class="ejercicios_completados">3</span></h1>
@@ -134,19 +134,27 @@
       <div class="contenedor-tarjetas">
         <div class="tarjeta-mapa">
             <p>Repositorio</p>
-            <div class="int-tarjeta"></div>
+            <div class="int-tarjeta">
+              <img src="./img/mapa/repositorio.png" class="img-fluid" alt=""/>
+            </div>
         </div>
         <div class="tarjeta-mapa">
             <p>Laboratorio de grabación</p>
-            <div class="int-tarjeta"></div>
+            <div class="int-tarjeta">
+              <img src="./img/mapa/lab_grabacion.png" class="img-fluid" alt=""/>
+            </div>
         </div>
         <div class="tarjeta-mapa">
             <p>Mensajería</p>
-            <div class="int-tarjeta"></div>
+            <div class="int-tarjeta">
+              <img src="./img/mapa/mensajería.png" class="img-fluid" alt=""/>
+            </div>
         </div>
         <div class="tarjeta-mapa">
             <p>Foro de discusión</p>
-            <div class="int-tarjeta"></div>
+            <div class="int-tarjeta">
+              <img src="./img/mapa/foro.png" class="img-fluid" alt=""/>
+            </div>
         </div>
       </div>
       <div class="zoomButton btn-next" data-type="next" data-root=".slideshowContainer"><i class="fas fa-angle-right"></i></div>
@@ -160,19 +168,21 @@
         var ele_overlay = $(".titulo_bienvenida,.sub_bienvenida")
         var instruc_overlay = $(".instruc_bienvenida")
         var button = $(".btn-inicio")
+        var viewport = $(".zoomViewport")
 
         button.on("click", function(){
          ele_overlay.addClass("mover_overlay");
          instruc_overlay.addClass("mover_overlay_abajo");
          setTimeout(function(){
             overlay_bco.addClass("d-none");
+            viewport.removeClass("blur");
           }, 1000);
          setTimeout(function(){
             $(".btn-next").click();
           }, 1300);
            setTimeout(function(){
             $("#l2").click();
-          }, 2000);
+          }, 2500);
        });
 
       });
@@ -180,6 +190,8 @@
     <script>
     $(function () {
       $( ".level2" ).click(function() {
+        var leccion = $(this).data("leccion")
+
         $(this).toggleClass("active");
         if ( $( this ).is( ".active" ) ) {
             $( ".info-activa" ).show();
