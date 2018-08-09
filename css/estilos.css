@@ -228,21 +228,39 @@ p{
   overflow-x: hidden;
 }
 .ejercicio{
-  width: 98%;
-    height: 150px;
+  width: 31%;
+  margin: 0 1%;
+  float: left;
+  height: 150px;
+  color: white;
     padding: 10px;
-    background: #21daf1;
+    box-sizing: border-box;
+    background: #1ecdb0;
     border: solid 5px #ffffff;
-    border-radius: 31px;
-    -moz-box-shadow: inset 0 0 2px #000000, 3px 4px 0px 1px rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: inset inset 0 0 2px #000000, 3px 4px 0px 1px rgba(0, 0, 0, 0.19);
-    box-shadow: inset 0 0 2px #000000, 3px 4px 0px 1px rgba(0, 0, 0, 0.19);
+    border-radius: 28px;
 }
-.ejercicio h4{
+.ejercicio.current {
+  color: #2f4152;
+  background: #ffcf07;
+}
+.ejercicio.lock {
+  color: #3e454c;
+  background: #b1bac3;
+}
+.ejercicio.izq {
+  margin: 0 1% 0 0;
+}
+.ejercicio.der {
+  margin: 0 0 0 1%;
+}
+.ejercicio p{
   color:#2f4152;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom:0;
+  margin-bottom:5px;
+}
+.ejercicio hr {
+  margin: 5px;
 }
 
 /*------------- Estilos Ejercicios --------------*/
@@ -302,31 +320,54 @@ p{
 .respuesta{
   margin-bottom: 20px;
 }
-
+.swiper-wrapper {
+    height:94%;
+    padding-top: 6%;
+}
 .swiper-container {
       width: 100%;
       height: auto;
       margin-left: auto;
       margin-right: auto;
     }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      height: 150px;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.ejercicio_bullets {
+  top: 0;
+}
+.swiper-pagination-bullet {
+   width: 20px !important;
+    height: 20px !important;
+    margin: 3px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 100%;
+    background: #f8f9fa !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #ffc107 !important;
+}
 
 /*------------- Estilos Boton con progreso --------------*/
 .progress-button {
@@ -590,7 +631,7 @@ p{
   transition: all 500ms ease-out;
 }
 /* General button style (reset) */
-.btn {
+.btn-mapa {
 	border: none;
 	font-family: inherit;
 	font-size: inherit;
@@ -609,7 +650,7 @@ p{
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.btn:after {
+.btn-mapa:after {
 	content: '';
 	position: absolute;
 	z-index: -1;
