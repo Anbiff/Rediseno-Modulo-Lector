@@ -1160,3 +1160,136 @@ and (max-width : 1024px)  {
 .cont_ranura p {
   margin: 0i
 }
+
+/* Estilo resultados */
+
+#cont-resultados {
+  color: white;
+  background-color:
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#80c5f7+0,5a71f6+100 */
+background: #5a71f6; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #80c5f7 0%, #5a71f6 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #80c5f7 0%,#5a71f6 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #80c5f7 0%,#5a71f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5f7', endColorstr='#5a71f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+
+  text-align: center;
+  padding: 25px;
+}
+
+#cont-resultados h1{
+}
+.factor-lectura {
+  width: 99%;
+  height: 200px;
+  margin: 50px 0;
+  border: solid 3px #deeafe;
+  border-radius: 10px;
+  padding: 7px;
+}
+#progreso-premio {
+  text-align: left;
+}
+.progress-bar {
+  background: #6551a6;
+}
+.progress {
+  height: 50px;
+  padding: 5px;
+  background-color: transparent;
+    border-radius: .25rem;
+    border: 2px solid white;
+}
+.titulo-regular {
+  font-family: libre_flanklin_light;
+  margin: 0;
+}
+.base {
+  background-image: url('../img/base-pasto.svg');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.premio-resultado {
+  width: 100%;
+  position: absolute;
+  bottom: 70px;
+}
+.premio-resultado img {
+  width: 100%;
+}
+.result-int {
+  width: 100%;
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.moneda-0 {
+  background-image: url(../img/monedas-0.gif);
+}
+.moneda-1 {
+  background-image: url(../img/monedas-1.gif);
+}
+.moneda-2 {
+  background-image: url(../img/monedas-2.gif);
+}
+.moneda-3 {
+  background-image: url(../img/monedas-3.gif);
+}
+.moneda-4 {
+  background-image: url(../img/monedas-4.gif);
+}
+.moneda-5 {
+  background-image: url(../img/monedas-5.gif);
+}
+.moneda-6 {
+  background-image: url(../img/monedas-6.gif);
+}
+.moneda-7 {
+  background-image: url(../img/monedas-7.gif);
+}
+.moneda-8 {
+  background-image: url(../img/monedas-8.gif);
+}
+.moneda-9 {
+  background-image: url(../img/monedas-9.gif);
+}
+.moneda-10 {
+  background-image: url(../img/monedas-10.gif);
+}
+.estrella {
+  width: 25%;
+  height: 30px;
+  background: url(../img/estrella_false.png) no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  float: left;
+}
+
+  .estrellas {
+    float: left;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+}
+
+  .true {
+    background: url("../img/estrella_true.png") no-repeat center;
+    background-size: contain;
+  }
+  .vel-lenta {
+  background: url("../img/lenta.png") no-repeat center;
+  background-size: contain;
+}
+
+.vel-buena {
+  background: url("../img/buena.png") no-repeat center;
+  background-size: contain;
+}
+
+.vel-rapida {
+  background: url("../img/rapida.png") no-repeat center;
+  background-size: contain;
+}
