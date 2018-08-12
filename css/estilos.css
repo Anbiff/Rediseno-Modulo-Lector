@@ -868,6 +868,45 @@ and (max-width : 1024px)  {
   display: inline-block;
 }
 
+#ed {
+  width: 155px;
+  height: 115px;
+  position: absolute;
+  z-index: 99;
+  top: -58px;
+  left: -54px;
+}
+
+#ed .num_leccion, #ef .num_leccion {
+  background-color: yellow;
+  width: 69px;
+  height: 41px;
+  display: inline-block;
+  z-index: 98;
+  margin: 0 auto;
+  background: #fbd321;
+  padding: 5px;
+  text-align: center;
+  border-radius: 0;
+  border: solid 2px #f6bc0b;
+  position: relative;
+  bottom: -55px;
+  left: -116px;
+}
+#ed .num_leccion:after {
+  color: #fbd321;
+  border-left: 16px solid;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -16px;
+    top: -2px;
+}
+#s0 {
+  width: 0px;
+}
 #s1 {
   background:url('../img/mapa/fnd_s1.png');
   background-size: cover;

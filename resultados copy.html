@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Resultados</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tercero/tercero.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+          <div id="barra">
+            <div id="logoLectura">
+              <img src="img/logo_LI.png">
+            </div>
+            <p id="leccion">Lección 1</p>.
+            <p id="ejercicio">Ejercicio1</p>
+            <a class="btn_menu" href="#">
+              <span></span>
+            </a>
+            <h2 id="nombreAlumno">Nombre de Alumno</h2>
+            <div class="botonera">
+              <a href="#"><img src="css/segundo/icn_boleta.png" alt="boleta"><p>Boleta</p></a>
+              <a href="#"><img src="css/segundo/icn_reporte.png" alt="reporte"><p>Reporte</p></a>
+              <a href="#"><img src="css/segundo/icn_cambio.png" alt="cambio"><p>Cambiar ejercicio</p></a>
+              <a href="#" id="col50"><p>Cambiar contraseña</p></a>
+              <a href="#" id="col50"><p>Salir</p></a>
+            </div>
+          </div>
+          <div id="caja">
+            <div class="titulo">
+              <div id="icono"><img src="css/segundo/iconos/iconos_result.png" alt="icono resultados"></div>
+              <h1 <span id="seccion">Resultados</span></h1>
+            </div>
+
+
+              <!--
+              Aquí comienza todo el contenido nuevo del acomodo de resultados
+              -->
+
+            <div id="cajaResultados">
+              <div class="resultado-col1" id="título">
+                <h1>¡Lección Terminada!</h1>
+                <div class="info-fin">
+                  <span>Ejercicios trabajados:</span><span>24</span>
+                </div>
+                <div class="acomp-fin"></div>
+              </div>
+              <div class="resultado-col2">
+                <div class="resultado" id="comprension">
+                  <div class="result-int">
+
+                    <h2 class="titulo-result">Comprensión</h2>
+                    <h2 class="nivel" id="calif-estrellas">Muy buena</h2>
+                    <span id="num-estrellas" style="display:none;">5</span>
+                    <div class="estrellas">
+                      <div class="estrella" id="e1"></div>
+                      <div class="estrella" id="e2"></div>
+                      <div class="estrella" id="e3"></div>
+                      <div class="estrella" id="e4"></div>
+                      <div class="estrella" id="e5"></div>
+                      <div class="estrella" id="e6"></div>
+                      <div class="estrella" id="e7"></div>
+                      <div class="estrella" id="e8"></div>
+                      <div class="estrella" id="e9"></div>
+                      <div class="estrella" id="e10"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="resultado" id="puntos">
+                  <div id="porcentaje" style="display:none;"><span id="valor">61</span><span>%</span></div>
+                  <div class="result-int" id="ilustra-puntos">
+                    <h2 class="titulo-result">Puntos</h2>
+                    <div class="puntaje">
+                      <span class="p-real">300</span>
+                      <span class="p-objetivo">de <span>300</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+                Termina el layout nuevo de resultados
+            -->
+
+          </div>
+          <div class="footer">
+            <p class="legal">Lectura Inteligente - © 2016 Derechos Reservados</p>
+            <form method="POST" action="">
+              <button type="submit" name="continuar" class="continuar hvr-bounce-to-left" value="Continuar" onclick="contOK = true;">Continuar ></button>
+  					</form>
+          </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <!-- nav toggle -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.btn_menu').click(function() {
+                    $('.bt_info').removeClass('active');
+                    $('.bx_info').removeClass('active');
+                    $('.btn_menu').toggleClass('active');
+                    $('.botonera').toggleClass('active');
+                });
+            });
+        </script>
+
+        <!--
+            Este es el script de java para mostrar el cofre, solo es una modificación del anterior, el script de las estrellas es el mismo.
+        -->
+
+        <script type="text/javascript">
+        $(function() {
+          if ($('#porcentaje > span#valor').text()>=0&&$('#porcentaje > span#valor').text()<=5) {
+          $("#ilustra-puntos").addClass("moneda-0");
+        } else if ($('#porcentaje > span#valor').text()>5&&$('#porcentaje > span#valor').text()<=10) {
+          $("#ilustra-puntos").addClass("moneda-1");
+        } else if ($('#porcentaje > span#valor').text()>=11&&$('#porcentaje > span#valor').text()<=20) {
+          $("#ilustra-puntos").addClass("moneda-2");
+        } else if ($('#porcentaje > span#valor').text()>=21&&$('#porcentaje > span#valor').text()<=30) {
+          $("#ilustra-puntos").addClass("moneda-3");
+        } else if ($('#porcentaje > span#valor').text()>=31&&$('#porcentaje > span#valor').text()<=40) {
+          $("#ilustra-puntos").addClass("moneda-4");
+        } else if ($('#porcentaje > span#valor').text()>=41&&$('#porcentaje > span#valor').text()<=50) {
+          $("#ilustra-puntos").addClass("moneda-5");
+        } else if ($('#porcentaje > span#valor').text()>=51&&$('#porcentaje > span#valor').text()<=60) {
+          $("#ilustra-puntos").addClass("moneda-6");
+        } else if ($('#porcentaje > span#valor').text()>=61&&$('#porcentaje > span#valor').text()<=70) {
+          $("#ilustra-puntos").addClass("moneda-7");
+        } else if ($('#porcentaje > span#valor').text()>=71&&$('#porcentaje > span#valor').text()<=80) {
+          $("#ilustra-puntos").addClass("moneda-8");
+        } else if ($('#porcentaje > span#valor').text()>=81&&$('#porcentaje > span#valor').text()<=90) {
+          $("#ilustra-puntos").addClass("moneda-9");
+        } else if ($('#porcentaje > span#valor').text()>=91) {
+          $("#ilustra-puntos").addClass("moneda-10");
+          }
+        });
+        </script>
+        <script type="text/javascript">
+          $(function() {
+            if ($('#num-estrellas').text()==1) {
+                $("#e1").addClass("true");
+            } else if ($('#num-estrellas').text()==2) {
+                $("#e1, #e2").addClass("true");
+            } else if ($('#num-estrellas').text()==3) {
+                $("#e1, #e2, #e3").addClass("true");
+            } else if ($('#num-estrellas').text()==4) {
+                $("#e1, #e2, #e3, #e4").addClass("true");
+            } else if ($('#num-estrellas').text()==5) {
+                $("#e1, #e2, #e3, #e4, #e5").addClass("true");
+            } else if ($('#num-estrellas').text()==6) {
+                $("#e1, #e2, #e3, #e4, #e5, #e6").addClass("true");
+            } else if ($('#num-estrellas').text()==7) {
+                $("#e1, #e2, #e3, #e4, #e5, #e6, #e7").addClass("true");
+            } else if ($('#num-estrellas').text()==8) {
+                $("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8").addClass("true");
+            } else if ($('#num-estrellas').text()==9) {
+                $("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8, #e9").addClass("true");
+            } else if ($('#num-estrellas').text()==10) {
+                $("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8, #e9, #e10").addClass("true");
+            }
+          });
+        </script>
+    </body>
+</html>
