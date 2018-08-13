@@ -134,6 +134,9 @@ p{
   margin: 10px
 }
 .info_menu {
+  position: absolute;
+  top: 10px;
+  left: 73px;
   margin: 10px;
 }
 .datos_usuario{
@@ -145,10 +148,17 @@ p{
 }
 .icono_usuario{
   width: 10%;
+  height: 40px;
   max-width: 40px;
   min-width: 40px;
   float: right;
-  margin: 10px
+  margin: 10px;
+  background-image: url(../img/usuario.svg);
+  background-size: contain;
+  background-position: center;
+}
+.icono_usuario.active {
+  background-image: url(../img/cerrar.svg);
 }
 .nombre_usuario{
   color: #2f4152;
@@ -1329,4 +1339,84 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5f7', end
 .vel-rapida {
   background: url("../img/rapida.png") no-repeat center;
   background-size: contain;
+}
+
+/* Menu */
+/* Botonera */
+
+.botonera{
+  opacity: 0;
+  z-index: 5;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 25px;
+  width: 400px;
+  margin-top: 60px;
+  border-radius:8px;
+  -webkit-transform: translate(0, -150%);
+  -ms-transform: translate(0, -150%);
+  -o-transform: translate(0, -150%);
+  transform: translate(0, -150%);
+}
+
+.botonera.active{
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.botonera,
+.botonera.active{
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+}
+
+.botonera .bx{
+  height: 100%;
+  padding: 1em 1.2em;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.botonera a{
+  float: left;
+  display: block;
+  width: 50%;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.botonera a+a{
+  border-top: 0;
+  border-left: 1px solid rgba(255,255,255,.1);
+}
+
+.botonera a img{
+  display: inline-block;
+}
+
+.botonera p {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.botonera {
+  background-color: #eef1f9;
+}
+
+#col50 {
+  width: 100%;
+  background: #3f51b5;
+  color: #80cf13;
+
+}
+
+#col50:hover {
+  background: #5e5e5f;
 }

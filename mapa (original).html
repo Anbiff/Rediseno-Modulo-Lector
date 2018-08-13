@@ -30,12 +30,16 @@
         <h1 class="titulo_lectura info_menu"> <small>Mapa</small> de Lecciones</h1>
       </div>
       <div class="col-6">
-        <div class="icono_usuario">
-          <a href="#"><img src="img/user.png" class="img-fluid" alt=""></a>
+        <div class="icono_usuario btn_menu">
         </div>
         <div class="datos_usuario">
             <p class="nombre_usuario">Juan José Hernández</p>
             <p class="grupo_usuario">Nombre de Grupo</p>
+        </div>
+        <div class="botonera">
+          <a href="#"><img src="img/icn_boleta.png" alt="boleta"><p>Boleta</p></a>
+          <a href="#"><img src="img/icn_reporte.png" alt="reporte"><p>Reporte</p></a>
+          <a href="#" id="col50"><p>Salir</p></a>
         </div>
       </div>
     </div>
@@ -220,6 +224,16 @@
         }
       });
     });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.btn_menu').click(function() {
+                $('.bt_info').removeClass('active');
+                $('.bx_info').removeClass('active');
+                $('.btn_menu').toggleClass('active');
+                $('.botonera').toggleClass('active');
+            });
+        });
     </script>
   </body>
 </html>
