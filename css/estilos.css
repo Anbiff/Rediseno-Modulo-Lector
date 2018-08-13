@@ -1092,8 +1092,6 @@ and (max-width : 1024px)  {
   height: 10px;
   border-radius: 50%;
   content: '';
-
-  background-color: #5562eb;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1167,6 +1165,23 @@ and (max-width : 1024px)  {
 }
 .inputGroup.mal label:before {
   background-color: #8747e5;
+}
+
+.inputGroup.bien input:checked ~ label:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+  background-color: #54E0C7;
+  border-color: #54E0C7;
+}
+.inputGroup.bien label:before {
+  background-color: #5562eb;
+}
+.inputGroup.mal input:checked ~ label:after {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 180.607 180.607' style='enable-background:new 0 0 180.607 180.607;' xml:space='preserve' width='23px' height='23px'%3E%3Cpath d='M180.607,10.607l-79.696,79.697l79.696,79.697L170,180.607l-79.696-79.696l-79.696,79.696L0,170.001l79.696-79.697L0,10.607 L10.607,0.001l79.696,79.696L170,0.001L180.607,10.607z' fill='%23FFFFFF'/%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+  background-color: #54E0C7;
+  border-color: #54E0C7;
+}
+.inputGroup.mal label:before {
+  background-color: #8831c4;
 }
 
 /* Estilo ranura */
