@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Estilos Lectura Inteligente -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Lectura Inteligente</title>
+  </head>
+  <body class="bg-repeat" style="background-image:url('img/fnd_arena.png')">
+          <div class="row">
+            <div class="col">
+              <h1 class="titulo_lectura info_menu"> <small> Lección 8.</small> Ejercicio <span class="ejercicios_completados">13</span></h1>
+            </div>
+            <div class="col-7">
+              <div class="icono_usuario">
+                <a href="#"><img src="img/user.png" class="img-fluid" alt=""></a>
+              </div>
+              <div class="datos_usuario">
+                  <p class="nombre_usuario">Juan José Hernández</p>
+                  <p class="grupo_usuario">Nombre de Grupo</p>
+              </div>
+            </div>
+          </div>
+    <div class="ui-wrapper" id="caja">
+        <div class="contenido">
+          <div class="row full_height">
+            <div class="contenedor_lectura" id="cont-result-leccion">
+              <h1>¡Lección Terminada!</h1>
+              <div class="row">
+                <div class="col-4 base">
+                  <div class="premio-resultado">
+                    <img src="./img/premio1-1_block.png"/>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                  <div class="col-6">
+                    <div class="factor-lectura">
+                      <h4>Puntos</h4>
+                      <div id="porcentaje" style=" display:none;"><span id="valor" >100</span>></div>
+                      <div class="result-int" id="ilustra-puntos">
+                      	<div class="nivel" id="calif-puntos">  </div>
+                      </div>
+                      <h4>9999/9999</h4>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="factor-lectura">
+                      <h4>Comprensión</h4>
+                      <div id="porcentaje" style=" display:none;"><span id="valor" >100</span>></div>
+                      <div class='result-int'>
+                        <span id='num-estrellas' style='display:none;'>5</span>
+                        <div class='estrellas'>
+                          <div class='estrella' id='e1'></div>
+                          <div class='estrella' id='e2'></div>
+                          <div class='estrella' id='e3'></div>
+                          <div class='estrella' id='e4'></div>
+                          <div class='estrella' id='e5'></div>
+                          <div class='estrella' id='e6'></div>
+                          <div class='estrella' id='e7'></div>
+                          <div class='estrella' id='e8'></div>
+                          <div class='estrella' id='e9'></div>
+                          <div class='estrella' id='e10'></div>
+                        </div>
+                        <div class='nivel' id='calif-estrellas' style='display:none;'>10</div>
+                      </div>
+                      <h4>Buena</h4>
+                    </div>
+                  </div>
+                  <div class="col-12" id="progreso-premio">
+                    <h3 class="titulo-regular">Animales Rescatados</h3>
+                    <h3>20/20</h3>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen_sobrepuesta"></div>
+          <div class="container-progress_btn">
+            <div class='pbtn' id="countDiv"></div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+    $(function() {
+      if ($('#velocidad > h4.nivel:contains("Buena")').length > 0) {
+        $("#ilustra-velocidad").addClass("vel-buena");
+      } else if ($('#velocidad > h4.nivel:contains("Lenta")').length > 0) {
+        $("#ilustra-velocidad").addClass("vel-lenta");
+      } else if ($('#velocidad > h4.nivel:contains("Veloz")').length > 0) {
+        $("#ilustra-velocidad").addClass("vel-rapida");
+      };
+    });
+    </script>
+    <script type='text/javascript'>
+    $(function() {
+      if ($('#porcentaje > span#valor').text()>=0&&$('#porcentaje > span#valor').text()<=5) {
+        $("#ilustra-puntos").addClass("moneda-0");
+      } else if ($('#porcentaje > span#valor').text()>5&&$('#porcentaje > span#valor').text()<=14) {
+        $("#ilustra-puntos").addClass("moneda-1");
+      } else if ($('#porcentaje > span#valor').text()>=15&&$('#porcentaje > span#valor').text()<=24) {
+        $("#ilustra-puntos").addClass("moneda-2");
+      } else if ($('#porcentaje > span#valor').text()>=25&&$('#porcentaje > span#valor').text()<=34) {
+        $("#ilustra-puntos").addClass("moneda-3");
+      } else if ($('#porcentaje > span#valor').text()>=35&&$('#porcentaje > span#valor').text()<=44) {
+        $("#ilustra-puntos").addClass("moneda-4");
+      } else if ($('#porcentaje > span#valor').text()>=45&&$('#porcentaje > span#valor').text()<=54) {
+        $("#ilustra-puntos").addClass("moneda-5");
+      } else if ($('#porcentaje > span#valor').text()>=55&&$('#porcentaje > span#valor').text()<=64) {
+        $("#ilustra-puntos").addClass("moneda-6");
+      } else if ($('#porcentaje > span#valor').text()>=65&&$('#porcentaje > span#valor').text()<=74) {
+        $("#ilustra-puntos").addClass("moneda-7");
+      } else if ($('#porcentaje > span#valor').text()>=75&&$('#porcentaje > span#valor').text()<=84) {
+        $("#ilustra-puntos").addClass("moneda-8");
+      } else if ($('#porcentaje > span#valor').text()>=85&&$('#porcentaje > span#valor').text()<=94) {
+        $("#ilustra-puntos").addClass("moneda-9");
+      } else if ($('#porcentaje > span#valor').text()>=95) {
+        $("#ilustra-puntos").addClass("moneda-10");
+      }
+    });
+    </script>
+    							<script type='text/javascript'>
+    							  $(function() {
+    											if ($('#num-estrellas').text()==1) {
+    												$("#e1").addClass("true");
+    											} else if ($('#num-estrellas').text()==2) {
+    												$("#e1, #e2").addClass("true");
+    											} else if ($('#num-estrellas').text()==3) {
+    												$("#e1, #e2, #e3").addClass("true");
+    											} else if ($('#num-estrellas').text()==4) {
+    												$("#e1, #e2, #e3, #e4").addClass("true");
+    											} else if ($('#num-estrellas').text()==5) {
+    												$("#e1, #e2, #e3, #e4, #e5").addClass("true");
+    											} else if ($('#num-estrellas').text()==6) {
+    												$("#e1, #e2, #e3, #e4, #e5, #e6").addClass("true");
+    											} else if ($('#num-estrellas').text()==7) {
+    												$("#e1, #e2, #e3, #e4, #e5, #e6, #e7").addClass("true");
+    											} else if ($('#num-estrellas').text()==8) {
+    												$("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8").addClass("true");
+    											} else if ($('#num-estrellas').text()==9) {
+    												$("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8, #e9").addClass("true");
+    											} else if ($('#num-estrellas').text()==10) {
+    												$("#e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8, #e9, #e10").addClass("true");
+    											}
+    										  });
+    							</script>
+  </body>
+</html>
